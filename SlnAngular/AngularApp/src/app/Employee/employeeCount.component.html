@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="radio" value="all" [(ngModel)] ="gender" name="select" (change) ="onSelectionChanged()" />
+    <span>All  - {{all}}</span>
+
+    <input type="radio" value="male" [(ngModel)] ="gender" name="select" (change) ="onSelectionChanged()" />
+    <span>Male - {{male}}</span>
+
+    <input type="radio" value="female" [(ngModel)] ="gender" name="select" (change) ="onSelectionChanged()" />
+    <span>Female  - {{female}}</span>
+</body>
+</html>

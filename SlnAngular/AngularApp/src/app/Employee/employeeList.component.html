@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <employee-count [all] = all [male] = male [female] = female (CountRadioButtonSelectionChanged) ="onRadioButtonSelectionChanged($event)"></employee-count>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        Employee Code
+                    </td>
+                    <td>
+                        Employee Name
+                    </td>
+                    <td>
+                        Salary
+                    </td>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        Date Of Birth
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let employee of employees">
+                    <tr *ngIf="gender == 'all' || gender == employee.gender">
+                        <td>
+                            {{employee.code}}
+                        </td>
+                        <td>
+                            {{ employee.name}}
+                        </td>
+                        <td>
+                            {{employee.salary|currency : 'USD':'symbol'}}
+                        </td>
+                        <td>
+                            {{employee.gender}}
+                        </td>
+                        <td>
+                            {{employee.dateOfBirth|date : 'MMM d, y'}}
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
