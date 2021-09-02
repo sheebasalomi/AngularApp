@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { IEmployee } from './Model/employee';
 
 @Component({
@@ -7,7 +7,7 @@ import { IEmployee } from './Model/employee';
     styleUrls: ['app/employee/employeeList.component.css']
 
 })
-export class EmployeeListComponent {
+export class EmployeeListComponent implements OnChanges{
   
     employees: IEmployee[] = [
         { code: 100, name: "Tom", salary: 20000, gender: 'male', dateOfBirth:'3/4/1980' },
@@ -21,6 +21,21 @@ export class EmployeeListComponent {
     all: number = this.employees.length;
     male: number = this.employees.filter(e => e.gender == 'male').length;
     female: number = this.employees.filter(e => e.gender == 'female').length;
+
+    simpleText: string = 'Simple Text';
+
+    ngOnChanges(changes: SimpleChanges) {
+        //for (let propertyName in changes) {
+        //    let change = changes[propertyName];
+        //    let current = JSON.stringify(change.currentValue);
+        //    let previous = JSON.stringify(change.previousValue);
+
+        //    console.log(current + previous);
+        //}
+
+        console.log('ngOnChanges');
+
+    }
 
     onRadioButtonSelectionChanged(gender: string) {
         this.gender = gender;

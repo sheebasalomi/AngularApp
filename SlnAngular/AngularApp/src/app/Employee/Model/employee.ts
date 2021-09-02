@@ -6,7 +6,7 @@
     dateOfBirth: string;
     department?: string;
 
-    computeMonthlySalary(annualSalary: number): number;
+    //computeMonthlySalary(annualSalary: number): number;
 }
 
 export class Employee implements IEmployee {
@@ -25,9 +25,9 @@ export class Employee implements IEmployee {
 
     }
 
-    computeMonthlySalary(annualSalary: number): number {
-        return this.salary/12;
-    }
+    //computeMonthlySalary(annualSalary: number): number {
+    //    return this.salary/12;
+    //}
 }
 
 export class Employee2 implements IEmployee {
@@ -36,8 +36,8 @@ export class Employee2 implements IEmployee {
 
     }
 
-    computeMonthlySalary(annualSalary: number): number {
-        return 0;
-    }
+    //computeMonthlySalary(annualSalary: number): number {
+    //    return 0;
+    //}
 
 }

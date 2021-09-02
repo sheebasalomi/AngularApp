@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './Employee/employee.component';
 import { EmployeeListComponent } from './Employee/employeeList.component';
 import { EmployeeCountComponent } from './Employee/employeeCount.component';
+import { SimpleComponent } from './Others/simple.component';
+
 
 @NgModule({
     imports: [BrowserModule, FormsModule ],
-    declarations: [AppComponent, EmployeeComponent, EmployeeListComponent, EmployeeCountComponent],
+    declarations: [AppComponent, EmployeeComponent, EmployeeListComponent, EmployeeCountComponent, SimpleComponent],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
